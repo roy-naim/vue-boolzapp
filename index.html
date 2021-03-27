@@ -16,15 +16,70 @@
   </div>
   <div id="root">
     <div class="container">
-      <aside>
-        <p>gdfgdfgdfgdfgd</p>
-      </aside>
+      <div class="text">
+        <aside>
+          <div class="navbar">
+            <img src="./img/avatar_io.jpg" alt="io">
+            <p class="three-icons">
+              <i class="fas fa-circle-notch"></i>
+              <i class="far fa-comment-alt"></i>
+              <i class="fas fa-ellipsis-v"></i>
+            </p>
+          </div>
+          <div class="notifiche">
+            <div class="bell-logo">
+              <i class="fas fa-bell-slash"></i>
+            </div>
+            <div class="notifiche-list">
+              <ul class="ricevi-not">
+                <li>Ricevi notifiche di nuovi messaggi</li>
+                <li>Attiva notifiche di desktop</li>
+              </ul>
+            </div>
+          </div>
+          <div class="input-cerca">
+            <i class="fas fa-search"></i>
+            <input type="text" placeholder="Cerca o inizia una nuova chat">
+          </div>
+          <div class="list-contacts">
+            <div class="contact" v-for="contact in contacts">
+              <img class="icon-contact" width="50px" :src="'./img/avatar' + contact.avatar + '.jpg'" alt="">
+              <span
+                class="name">
+                {{contact.name}}
+              </span>
+            </div>
+          </div>
+        </aside>
+        <div class="contenitore-destro">
+          <div class="navbar">
+            <img src="./img/avatar_io.jpg" alt="io">
+
+          </div>
+          <div class="bg-chat">
+            gdfgdf
+          </div>
+          <div class="bottom-chat">
+            <div class="two-icons">
+              <i class="far fa-grin-alt"></i>
+              <i class="fas fa-paperclip"></i>
+            </div>
+            <div class="input-chat">
+              <input type="text" placeholder="Scrivi un messaggio">
+            </div>
+            <div class="microphone">
+              <i class="fas fa-microphone"></i>
+            </div>
+          </div>
+        </div>
+     </div>
     </div>
   </div>
 
 
 <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.10.4/dayjs.min.js" integrity="sha512-0fcCRl828lBlrSCa8QJY51mtNqTcHxabaXVLPgw/jPA5Nutujh6CbTdDgRzl9aSPYW/uuE7c4SffFUQFBAy6lg==" crossorigin="anonymous"></script>
+<script src="./dati.js" charset="utf-8"></script>
 <script src="./main.js" charset="utf-8"></script>
 </body>
 </html>

@@ -26,13 +26,121 @@ body {
   box-shadow: 1px 1px 4px 4px #888888;
 }
 
+.text {
+  display: flex;
+  /* align-items: center; */
+}
+
 aside {
   background-color: #ededed;
   color: #717171; /*grey text aside*/
-  width: 330px;
+  width: 350px;
   height: 100%;
-  padding-left: 20px;
-  padding-bottom: 10px;
+  /* padding-left: 20px; */
+  /* padding-bottom: 10px; */
+  border-right: 1px solid lightgrey;
   display: flex;
   flex-direction: column;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+}
+
+.navbar img {
+  width: 50px;
+  border-radius: 50%;
+  /* padding-top: 10px; */
+}
+
+.navbar .three-icons i {
+  font-size: 15px;
+  padding: 0 15px;
+}
+
+.notifiche {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #9de1fe;
+  color: #000;
+  padding: 20px 0;
+}
+
+.ricevi-not li {
+  list-style: none;
+}
+.bell-logo {
+  background-color: white;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.bell-logo .fa-bell-slash {
+  color: #9de1fe;
+}
+
+.input-cerca {
+  background-color: #f6f6f6;
+}
+
+.input-cerca input {
+  border-radius: 20px;
+  width: 80%;
+  border-style: none;
+  padding: 10px 5px;
+  margin: 5px;
+}
+
+.list-contacts {
+  background-color: white;
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid lightgrey;
+  padding: 20px 10px;
+}
+
+.icon-contact {
+  border-radius: 50%;
+}
+
+.contenitore-destro {
+  display: flex;
+  flex-direction: column;
+  background-color: #ededed;
+  color: #717171; /*grey text aside*/
+  width: 100%;
+  height: 100%;
+  /* padding-left: 20px; */
+  /* padding-bottom: 10px; */
+
+}
+
+.bg-chat {
+  background-image: url("./img/mine.jpg");
+  height: 500px;
+}
+
+.bottom-chat {
+  display: flex;
+  align-items: center;
+  background-color: #f0f0f0;
+}
+
+.bottom-chat i {
+  padding: 10px;
+  font-size: 20px;
+}
+
+.input-chat input {
+  border-radius: 30px;
+  width: 53vw;
+  border-style: none;
+  padding: 15px 10px;
+  margin: 5px;
 }
