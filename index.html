@@ -19,7 +19,9 @@
       <div class="text">
         <aside>
           <div class="navbar">
-            <img src="./img/avatar_io.jpg" alt="io">
+            <div class="profile">
+              <img src="./img/avatar_io.jpg" alt="io">
+            </div>
             <p class="three-icons">
               <i class="fas fa-circle-notch"></i>
               <i class="far fa-comment-alt"></i>
@@ -53,11 +55,20 @@
         </aside>
         <div class="contenitore-destro">
           <div class="navbar">
-            <img src="./img/avatar_io.jpg" alt="io">
+            <div class="profile">
+              <img src="./img/avatar_io.jpg" alt="io">
+            </div>
+            <div class="search-points">
+              <i class="fas fa-search"></i>
+              <i class="fas fa-ellipsis-v"></i>
+            </div>
 
           </div>
           <div class="bg-chat">
-            gdfgdf
+            <div class="message" v-for:"message in contacts">
+              <p class="received">{{ message.messages.text }}</p>
+              <p class="sent">{{ message.messages.text }}</p>
+            </div>
           </div>
           <div class="bottom-chat">
             <div class="two-icons">
