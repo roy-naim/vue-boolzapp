@@ -158,6 +158,15 @@ aside {
   display: flex;
 }
 
+.message {
+  padding: 10px;
+
+}
+
+.message:after{ /*clearfix*/
+  content: '';
+  display: table;
+  clear: both; }
 
 .received {
   background-color: #fff;
