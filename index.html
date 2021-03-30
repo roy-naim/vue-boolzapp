@@ -44,7 +44,8 @@
             <input v-model="inputSearch" type="text" placeholder="Cerca o inizia una nuova chat">
           </div>
           <div class="list-contacts">
-            <div class="contact" v-for="(contact, i) in filteredList"  @click="click_person(contact, i)">
+            <div class="contact" v-if="contact.name.toLowerCase().includes(inputSearch.toLowerCase())" v-for="(contact, i) in contacts"  @click="click_person(contact, i)">
+              <!-- v-if, perche' sto mettendo una funzione nel v-if  (prima utilizzavo il computed)-->
               <img class="icon-contact" width="50px" :src="'./img/avatar' + contact.avatar + '.jpg'" alt="">
               <span
                 class="name">
@@ -57,6 +58,10 @@
           <div class="navbar">
             <div class="profile">
               <img class="icon-contact" width="50px" :src="'./img/avatar' + contacts[indexSel].avatar + '.jpg'" alt="">
+            </div>
+            <div class="contact-details">
+              <h4 class="name">{{ contacts[indexSel].name }}</h4>
+              <span> Ultimo accesso  {{ contacts[indexSel].messages[contacts[indexSel].messages.length -1].date }}</span>
             </div>
             <div class="search-points">
               <i class="fas fa-search"></i>

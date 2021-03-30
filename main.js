@@ -41,17 +41,16 @@ var app = new Vue({
         }, 1000);
       }
     },
-
   },
 
-  computed: { //ritorna tutti i contacts..fa le funzioni e si accorge di cambiamenti Vue
-    //un aiuto in piu' che controlla..
-    filteredList() {
-      return this.contacts.filter(contact => {
-        return contact.name.toLowerCase().includes(this.inputSearch.toLowerCase())
-      })
-    }
-  }
+  // computed: { //ritorna tutti i contacts..fa le funzioni e si accorge di cambiamenti Vue
+  //   //un aiuto in piu' che controlla..
+  //   filteredList() {
+  //     return this.contacts.filter(contact => {
+  //       return contact.name.toLowerCase().includes(this.inputSearch.toLowerCase())
+  //     })
+  //   }
+  // }
 
 
   // methods: {
