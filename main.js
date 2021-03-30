@@ -1,6 +1,8 @@
 var app = new Vue({
   el: '#root',
   data: {
+    indexSel: 0,
+    inputSearch: '',
     inputText: '',
     contacts: contacts,
     user: [],
@@ -11,7 +13,8 @@ var app = new Vue({
   // },
 
   methods: {
-    click_person: function (contact) {
+    click_person: function (contact, i) {
+      this.indexSel = i,
       this.user = contact,
       console.log(this.user);
     },
@@ -37,8 +40,20 @@ var app = new Vue({
           item.messages.push(answer);
         }, 1000);
       }
+    },
+
+  },
+
+  computed: { //ritorna tutti i contacts..fa le funzioni e si accorge di cambiamenti Vue
+    //un aiuto in piu' che controlla..
+    filteredList() {
+      return this.contacts.filter(contact => {
+        return contact.name.toLowerCase().includes(this.inputSearch.toLowerCase())
+      })
     }
   }
+
+
   // methods: {
   //   getTime: function(date) {
   //     let datetime = new Date(date);

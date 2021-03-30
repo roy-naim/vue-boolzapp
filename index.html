@@ -41,10 +41,10 @@
           </div>
           <div class="input-cerca">
             <i class="fas fa-search"></i>
-            <input type="text" placeholder="Cerca o inizia una nuova chat">
+            <input v-model="inputSearch" type="text" placeholder="Cerca o inizia una nuova chat">
           </div>
           <div class="list-contacts">
-            <div class="contact" v-for="contact in contacts"  @click="click_person(contact)">
+            <div class="contact" v-for="(contact, i) in filteredList"  @click="click_person(contact, i)">
               <img class="icon-contact" width="50px" :src="'./img/avatar' + contact.avatar + '.jpg'" alt="">
               <span
                 class="name">
@@ -56,7 +56,7 @@
         <div class="contenitore-destro">
           <div class="navbar">
             <div class="profile">
-              <img src="./img/avatar_io.jpg" alt="io">
+              <img class="icon-contact" width="50px" :src="'./img/avatar' + contacts[indexSel].avatar + '.jpg'" alt="">
             </div>
             <div class="search-points">
               <i class="fas fa-search"></i>
