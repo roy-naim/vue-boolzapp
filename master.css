@@ -21,8 +21,8 @@ body {
   transform: translate(-50%, -50%);
   border-color: #ededed;
   background-color: white;
-  width: 80vw;
-  height: 95vh;
+  /* width: 80vw;
+  height: 95vh; */
   margin: 0 auto;
   box-shadow: 1px 1px 4px 4px #888888;
 }
@@ -261,4 +261,35 @@ aside {
 .message-destroy {
   cursor: pointer;
   padding: 4px 0;
+}
+
+@media screen and (max-width: 1024px){
+  aside {
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 768px){
+  .text {
+    width: 730px;
+  }
+}
+
+@media screen and (max-width: 480px){
+  .contenitore-destro, aside  {
+    display: none;
+    /* width: 100%; */
+  }
+
+  .contenitore-destro.show, aside.show {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+  }
+
+  .text {
+    width: 100%;
+  }
+
 }

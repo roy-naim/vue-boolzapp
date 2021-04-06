@@ -7,12 +7,16 @@ var app = new Vue({
     inputText: '',
     contacts: contacts,
     user: [],
+    left: true,
+    right: false,
   },
 
   methods: {
     click_person: function (contact, i) {
       this.indexSel = i,
       this.user = contact,
+      this.right = true,
+      this.left = false,
       console.log(this.user);
     },
 
@@ -48,7 +52,7 @@ var app = new Vue({
       let splitDate = hourSplit[0].split('/');
       let newDate = splitDate[2] + '-' + splitDate[1] + '-' + splitDate[0] + ' '+ hourSplit[1];
       let nuovaData = new Date(newDate);
-      console.log(nuovaData);
+      // console.log(nuovaData);
 
       let newHour = nuovaData.getHours();
       let newMin = nuovaData.getMinutes();

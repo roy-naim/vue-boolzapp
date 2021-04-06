@@ -20,7 +20,7 @@
   >
     <div class="container">
       <div class="text">
-        <aside>
+        <aside :class="(left) ? 'show' : '' ">
           <div class="navbar">
             <div class="profile">
               <img src="./img/avatar_io.jpg" alt="io">
@@ -48,7 +48,7 @@
           </div>
           <div class="list-contacts">
             <div class="contact"
-                  v-if="contact.name.toLowerCase().includes(inputSearch.toLowerCase())"
+                  v-if="contact.name.toLowerCase().includes(inputSearch.toLowerCase()) && contact.messages.length != 0"
                   v-for="(contact, i) in contacts"
                   @click="click_person(contact, i)">
               <!-- v-if, perche' sto mettendo una funzione nel v-if  (prima utilizzavo il computed)-->
@@ -59,13 +59,16 @@
                   {{contact.name}}
                 </span>
               </div>
-              <span class="hours">
-                {{ showHourMin(contact.messages[contact.messages.length - 1].date) }}
+              <span class="hours"
+                    v-if="contacts[indexSel].messages.length">
+                  {{ showHourMin(contact.messages[contact.messages.length - 1].date) }}
               </span>
+              <span v-else="''"></span>
             </div>
           </div>
         </aside>
-        <div class="contenitore-destro">
+        <div class="contenitore-destro"
+              :class="(right) ? 'show' : '' ">
           <div class="navbar">
             <div class="left-nav">
               <div class="profile">
