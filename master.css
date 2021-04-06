@@ -208,6 +208,8 @@ aside {
   display: block;
   cursor: pointer;
   position: absolute;
+  padding: 10px 0;
+  top: 0;
   right: 0;
 }
 
@@ -232,8 +234,17 @@ aside {
 }
 
 .message-options {
+  z-index: 10;
   position: absolute;
   float: right;
+}
+
+.bg-message {
+  background-color: #fff;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  padding: 8px;
+  margin-top: 15px;
 }
 
 /* i .message-options:hover {
@@ -244,6 +255,13 @@ aside {
   display: block;
 } */
 
+.message-info {
+  cursor: pointer;
+  padding: 4px 0;
+}
+
 .message-destroy {
   cursor: pointer;
+  padding: 4px 0;
+
 }
