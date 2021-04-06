@@ -47,12 +47,20 @@
             <input v-model="inputSearch" type="text" placeholder="Cerca o inizia una nuova chat">
           </div>
           <div class="list-contacts">
-            <div class="contact" v-if="contact.name.toLowerCase().includes(inputSearch.toLowerCase())" v-for="(contact, i) in contacts"  @click="click_person(contact, i)">
+            <div class="contact"
+                  v-if="contact.name.toLowerCase().includes(inputSearch.toLowerCase())"
+                  v-for="(contact, i) in contacts"
+                  @click="click_person(contact, i)">
               <!-- v-if, perche' sto mettendo una funzione nel v-if  (prima utilizzavo il computed)-->
-              <img class="icon-contact" width="50px" :src="'./img/avatar' + contact.avatar + '.jpg'" alt="">
-              <span
-                class="name">
-                {{contact.name}}
+              <div class="img-name">
+                <img class="icon-contact" width="50px" :src="'./img/avatar' + contact.avatar + '.jpg'" alt="">
+                <span
+                  class="name">
+                  {{contact.name}}
+                </span>
+              </div>
+              <span class="hours">
+                {{ showHourMin(contact.messages[contact.messages.length - 1].date) }}
               </span>
             </div>
           </div>

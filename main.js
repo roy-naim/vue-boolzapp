@@ -9,10 +9,6 @@ var app = new Vue({
     user: [],
   },
 
-  // created: function () {
-  //
-  // },
-
   methods: {
     click_person: function (contact, i) {
       this.indexSel = i,
@@ -45,6 +41,19 @@ var app = new Vue({
 
     remove: function (i) {
       this.contacts[this.indexSel].messages.splice(i, 1);
+    },
+
+    showHourMin: function (data) {
+      let hourSplit = data.split(' ');
+      let splitDate = hourSplit[0].split('/');
+      let newDate = splitDate[2] + '-' + splitDate[1] + '-' + splitDate[0] + ' '+ hourSplit[1];
+      let nuovaData = new Date(newDate);
+      console.log(nuovaData);
+
+      let newHour = nuovaData.getHours();
+      let newMin = nuovaData.getMinutes();
+
+      return newHour + ':' + newMin;
     }
 
     // showOptions: function (indexMess) {
@@ -73,4 +82,5 @@ var app = new Vue({
   //     let minutes = datetime.getMinutes();
   //     return: `${hours}:${minutes}`;
   //   }
+
 });

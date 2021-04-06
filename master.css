@@ -120,9 +120,15 @@ aside {
 .contact {
   cursor: pointer;
   display: flex;
+  justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid lightgrey;
   padding: 20px 10px;
+}
+
+.img-name {
+  display: flex;
+  align-items: center;
 }
 
 .contact:hover {
@@ -247,14 +253,6 @@ aside {
   margin-top: 15px;
 }
 
-/* i .message-options:hover {
-  display: block;
-  color: red;
-}
-.message-options.active {
-  display: block;
-} */
-
 .message-info {
   cursor: pointer;
   padding: 4px 0;
@@ -263,5 +261,4 @@ aside {
 .message-destroy {
   cursor: pointer;
   padding: 4px 0;
-
 }
