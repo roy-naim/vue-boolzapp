@@ -1,6 +1,7 @@
 var app = new Vue({
   el: '#root',
   data: {
+    indexOpt: null,
     indexSel: 0,
     inputSearch: '',
     inputText: '',
@@ -41,6 +42,18 @@ var app = new Vue({
         }, 1000);
       }
     },
+
+    remove: function (i) {
+      this.contacts[this.indexSel].messages.splice(i, 1);
+    }
+
+    // showOptions: function (indexMess) {
+    //   let message = this.contacts[this.index].messages[indexMess];
+    //   this.contacts[this.index].messages[indexMess] = {
+    //     ...message,
+    //     showOptions: true,
+    //   }
+    // }
   },
 
   // computed: { //ritorna tutti i contacts..fa le funzioni e si accorge di cambiamenti Vue
