@@ -20,6 +20,11 @@ var app = new Vue({
       console.log(this.user);
     },
 
+    goBack: function () {
+      this.left = true,
+      this.right = false
+    },
+
     add: function (item) {
       let today = new Date().toLocaleString();
       if (this.inputText != '') {
@@ -58,7 +63,9 @@ var app = new Vue({
       let newMin = nuovaData.getMinutes();
 
       return newHour + ':' + newMin;
-    }
+    },
+
+
 
     // showOptions: function (indexMess) {
     //   let message = this.contacts[this.index].messages[indexMess];

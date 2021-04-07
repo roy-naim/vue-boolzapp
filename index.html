@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+  <link rel="icon" href="./img/whatsapp-logo.png" type="img/icon type">
   <link rel="stylesheet" href="./master.css">
   <title>Boolzapp</title>
 </head>
@@ -15,12 +16,13 @@
   <div class="banner">
 
   </div>
-  <div id="root"
-    @click="indexOpt = null"
-  >
+  <div id="root" @click="indexOpt = null">
     <div class="container">
       <div class="text">
+
+        <!-- CONTENITORE LATO SINISTRO INCLUSO LISTA CONTATTI -->
         <aside :class="(left) ? 'show' : '' ">
+          <!-- Navbar -->
           <div class="navbar">
             <div class="profile">
               <img src="./img/avatar_io.jpg" alt="io">
@@ -31,6 +33,7 @@
               <i class="fas fa-ellipsis-v"></i>
             </p>
           </div>
+          <!-- Notifiche -->
           <div class="notifiche">
             <div class="bell-logo">
               <i class="fas fa-bell-slash"></i>
@@ -38,20 +41,22 @@
             <div class="notifiche-list">
               <ul class="ricevi-not">
                 <li>Ricevi notifiche di nuovi messaggi</li>
-                <li>Attiva notifiche di desktop <i class="fas fa-chevron-right"></i></li>
+                <li><a href="#">Attiva notifiche di desktop </a> <i class="fas fa-chevron-right"></i></li>
               </ul>
             </div>
           </div>
+          <!-- Cerca o inizia una nuova chat -->
           <div class="input-cerca">
             <i class="fas fa-search"></i>
             <input v-model="inputSearch" type="text" placeholder="Cerca o inizia una nuova chat">
           </div>
+          <!-- lista contatti, incluso l'orario dell'ultimo accesso -->
           <div class="list-contacts">
             <div class="contact"
                   v-if="contact.name.toLowerCase().includes(inputSearch.toLowerCase()) && contact.messages.length != 0"
                   v-for="(contact, i) in contacts"
                   @click="click_person(contact, i)">
-              <!-- v-if, perche' sto mettendo una funzione nel v-if  (prima utilizzavo il computed)-->
+                  <!-- v-if, perche' sto mettendo una funzione nel v-if  (prima utilizzavo il computed)-->
               <div class="img-name">
                 <img class="icon-contact" width="50px" :src="'./img/avatar' + contact.avatar + '.jpg'" alt="">
                 <span
@@ -67,11 +72,17 @@
             </div>
           </div>
         </aside>
+
+        <!-- CONTENITORE DESTRO INCLUSO BG E CHAT -->
         <div class="contenitore-destro"
               :class="(right) ? 'show' : '' ">
+          <!-- Navbar -->
           <div class="navbar">
             <div class="left-nav">
               <div class="profile">
+                <i class="fas fa-chevron-left"
+                  @click="goBack()"
+                ></i>
                 <img class="icon-contact" width="50px" :src="'./img/avatar' + contacts[indexSel].avatar + '.jpg'" alt="">
               </div>
               <div class="contact-details">
@@ -89,7 +100,7 @@
             </div>
 
           </div>
-           <!-- v-for="contact in contacts" -->
+          <!-- Chat (contenente i status sent e received) -->
           <div class="bg-chat">
             <div class="message" v-for="(message, i) in user.messages">
               <div :class= "message.status">{{ message.text }}
@@ -99,6 +110,7 @@
                   @click.stop="indexOpt = i"
                 ></i>
                 <p>{{ message.date }}</p>
+                <!-- OPTION CHE APPARE AL CLICK DELLA CHEVR. DOWN -->
                 <div
                   class="message-options bg-message"
                   v-if="indexOpt == i">
@@ -109,10 +121,9 @@
                   >Cancella messaggio</div>
                 </div>
               </div>
-
-              <!-- <div class="sent">{{ message.text }}</div> -->
             </div>
           </div>
+          <!-- Barra in basso per la chat, ossia per scrivere un messaggio -->
           <div class="bottom-chat">
             <div class="two-icons">
               <i class="far fa-grin-alt"></i>

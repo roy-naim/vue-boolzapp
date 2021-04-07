@@ -83,9 +83,16 @@ aside {
   font-weight: lighter;
 }
 
-.ricevi-not li:last-child {
+.ricevi-not li a {
+  cursor: pointer;
   font-size: 12px;
   padding-top: 5px;
+  text-decoration: none;
+  color: #262626;
+}
+
+.ricevi-not li:last-child:hover {
+  text-decoration: underline;
 }
 .bell-logo {
   background-color: white;
@@ -168,6 +175,10 @@ aside {
   font-size: 20px;
   padding-right: 20px;
 }
+
+.search-points i {
+  padding: 0 20px;
+}
 .bg-chat {
   background-image: url("./img/mine.jpg");
   height: 100%;
@@ -199,10 +210,12 @@ aside {
 
 .message {
   padding: 10px;
+  color: black;
 }
 
 .message p {
   font-size: 12px;
+  color: #717171;
 }
 
 .message:after{ /*clearfix*/
@@ -243,10 +256,12 @@ aside {
   z-index: 10;
   position: absolute;
   float: right;
+  color: #717171;
 }
 
 .bg-message {
   background-color: #fff;
+  color: black;
   border: 1px solid lightgrey;
   border-radius: 5px;
   padding: 8px;
@@ -262,7 +277,11 @@ aside {
   cursor: pointer;
   padding: 4px 0;
 }
-
+@media screen and (min-width:481px){
+  .profile i {
+    display: none;
+  }
+}
 @media screen and (max-width: 1024px){
   aside {
     width: 300px;
