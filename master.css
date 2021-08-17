@@ -297,14 +297,14 @@ aside {
 @media screen and (max-width: 480px){
   .contenitore-destro, aside  {
     display: none;
+    height: 815px;
     /* width: 100%; */
   }
 
   .contenitore-destro.show, aside.show {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-
+    width: 320px;
   }
 
   .text {

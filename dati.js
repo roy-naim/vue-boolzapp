@@ -82,4 +82,26 @@ const contacts= [
 			}
 		],
 	},
+	{
+		name: 'Leonardo',
+		avatar: '_2',
+		visible: true,
+		messages: [
+			{
+				date: '10/01/2020 15:30:55',
+				text: 'Hey mate',
+				status: 'sent'
+			},
+			{
+				date: '10/01/2020 15:50:00',
+				text: 'Did you book our flight to LA?',
+				status: 'sent'
+			},
+			{
+				date: '10/01/2020 16:15:22',
+				text: 'Yes, I have already booked!',
+				status: 'received'
+			}
+		],
+	},
 ]

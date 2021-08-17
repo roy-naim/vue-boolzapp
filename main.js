@@ -41,7 +41,7 @@ var app = new Vue({
           let now = new Date().toLocaleString();
           now = now.replace(",","");
           let answer = {
-            text: "Ok",
+            text: "You welcome",
             status: 'received',
             date: now
           }
