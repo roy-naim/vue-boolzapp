@@ -27,21 +27,23 @@ var app = new Vue({
 
     add: function (item) {
       let today = new Date().toLocaleString();
+      today = today.replace(",","");
       if (this.inputText != '') {
         let obj = {
           text: this.inputText,
           status: 'sent',
-          date: today,
+          date: today
         }
         item.messages.push(obj);
         this.inputText = '';
 
         setTimeout(function() {
           let now = new Date().toLocaleString();
+          now = now.replace(",","");
           let answer = {
             text: "Ok",
             status: 'received',
-            date: now,
+            date: now
           }
           item.messages.push(answer);
         }, 1000);
@@ -55,7 +57,7 @@ var app = new Vue({
     showHourMin: function (data) {
       let hourSplit = data.split(' ');
       let splitDate = hourSplit[0].split('/');
-      let newDate = splitDate[2] + '-' + splitDate[1] + '-' + splitDate[0] + ' '+ hourSplit[1];
+      let newDate = splitDate[2] + '-' + splitDate[1] + '-' + splitDate[0] + ' ' + hourSplit[1];
       let nuovaData = new Date(newDate);
       // console.log(nuovaData);
 
