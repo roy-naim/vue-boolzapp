@@ -6,39 +6,39 @@ const contacts= [
 		messages: [
 			{
 				date: '10/01/2020 15:30:55',
-				text: 'Hai portato a spasso il cane?',
+				text: 'Did you take the dog for a walk?',
 				status: 'sent'
 			},
 			{
 				date: '10/01/2020 15:50:00',
-				text: 'Ricordati di dargli da mangiare',
+				text: 'Remember to feed him.',
 				status: 'sent'
 			},
 			{
 				date: '10/01/2020 16:15:22',
-				text: 'Tutto fatto!',
+				text: 'All done!',
 				status: 'received'
 			}
 		],
 	},
 	{
-		name: 'Fabio',
+		name: 'Joey',
 		avatar: '_2',
 		visible: true,
 		messages: [
 			{
 				date: '20/03/2020 16:30:00',
-				text: 'Ciao come stai?',
+				text: 'Hi there!',
 				status: 'sent'
 			},
 			{
 				date: '20/03/2020 16:30:55',
-				text: 'Bene grazie! Stasera ci vediamo?',
+				text: 'Hey, how you doin`?',
 				status: 'received'
 			},
 			{
 				date: '20/03/2020 16:35:00',
-				text: 'Mi piacerebbe ma devo andare a fare la spesa.',
+				text: 'Good, thanks!',
 				status: 'sent'
 			}
 		],
@@ -50,17 +50,17 @@ const contacts= [
 		messages: [
 			{
 				date: '28/03/2020 10:10:40',
-				text: 'La Marianna va in campagna',
+				text: 'Marianna will go to countryside',
 				status: 'received'
 			},
 			{
 				date: '28/03/2020 10:20:10',
-				text: 'Sicuro di non aver sbagliato chat?',
+				text: 'Are you sure you haven`t got the wrong chat?',
 				status: 'sent'
 			},
 			{
 				date: '28/03/2020 16:15:22',
-				text: 'Ah scusa!',
+				text: 'OMG, sorry!',
 				status: 'received'
 			}
 		],
@@ -72,12 +72,12 @@ const contacts= [
 		messages: [
 			{
 				date: '10/01/2020 15:30:55',
-				text: 'Lo sai che ha aperto una nuova pizzeria?',
+				text: 'Did you know that a new japanese restaurant has opened?',
 				status: 'sent'
 			},
 			{
 				date: '10/01/2020 15:50:00',
-				text: 'Si, ma preferirei andare al cinema',
+				text: 'Yes, but I`d rather go to the cinema.',
 				status: 'received'
 			}
 		],
@@ -94,12 +94,12 @@ const contacts= [
 			},
 			{
 				date: '10/01/2020 15:50:00',
-				text: 'Did you book our flight to LA?',
+				text: 'Do you wanna play padel?',
 				status: 'sent'
 			},
 			{
 				date: '10/01/2020 16:15:22',
-				text: 'Yes, I have already booked!',
+				text: 'When?',
 				status: 'received'
 			}
 		],
@@ -111,7 +111,7 @@ const contacts= [
 		messages: [
 			{
 				date: '10/01/2020 15:30:55',
-				text: 'Hey mate',
+				text: 'Hey',
 				status: 'sent'
 			},
 			{

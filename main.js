@@ -38,10 +38,14 @@ var app = new Vue({
         this.inputText = '';
 
         setTimeout(function() {
+          const newMessages = [
+          'Ok, I`ll be there.', 'Great! Let`so go to Central Perk bar.'];
+          let max = newMessages.length - 1;
+          let randomIndex = Math.floor(Math.random() * (max + 1));
           let now = new Date().toLocaleString();
           now = now.replace(",","");
           let answer = {
-            text: "You welcome",
+            text: newMessages[randomIndex],
             status: 'received',
             date: now
           }

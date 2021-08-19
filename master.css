@@ -168,6 +168,12 @@ aside {
 }
 
 .profile {
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+}
+
+.profile h3 {
   padding-left: 20px;
 }
 
